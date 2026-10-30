@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netwatch"
+version = "1.0.0"
+description = "Enterprise network monitoring and alerting — ping, TCP and HTTP checks, SQLite history, email/webhook alerts, web dashboard."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "NetWatch Contributors" }]
+
+[project.scripts]
+netwatch = "netwatch.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["netwatch*"]
